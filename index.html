@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy New Year 2026 — Greeting Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="ticker"><span>🎉 Happy New Year 2026 • Create & Share your card • Made with ❤️</span></div>
+      <h1>Happy New Year 2026 — Create Your Greeting</h1>
+      <p class="subtitle">Upload photo, add name, choose template & shape, add stickers, then download or share.</p>
+    </header>
+
+    <main class="main">
+      <section class="controls">
+        <label class="control"><span>Photo</span><input id="photoInput" type="file" accept="image/*"></label>
+        <label class="control"><span>Name</span><input id="nameInput" type="text" placeholder="Enter your name (optional)"></label>
+
+        <label class="control"><span>Template</span>
+          <select id="templateSelect">
+            <option value="gold">Gold & Black</option>
+            <option value="red">Red Love</option>
+            <option value="neon">Neon Party</option>
+            <option value="min">Minimal</option>
+          </select>
+        </label>
+
+        <label class="control"><span>Shape</span>
+          <select id="shapeSelect">
+            <option value="square">Square (1:1)</option>
+            <option value="portrait">Portrait (9:16)</option>
+            <option value="landscape">Landscape (16:9)</option>
+            <option value="fullscreen">Full-Screen</option>
+          </select>
+        </label>
+
+        <label class="control"><span>Language</span>
+          <select id="langSelect"><option value="en">English</option><option value="hi">हिन्दी</option></select>
+        </label>
+
+        <div class="buttons">
+          <button id="generateBtn" class="btn">Generate</button>
+          <button id="downloadBtn" class="btn btn-green">Download</button>
+          <button id="shareBtn" class="btn btn-whatsapp">Share (WhatsApp)</button>
+        </div>
+
+        <div class="toggles">
+          <button id="confettiToggle" class="small">Toggle Confetti</button>
+          <button id="fireworksToggle" class="small">Toggle Fireworks</button>
+          <button id="musicBtn" class="small">Play Music</button>
+        </div>
+      </section>
+
+      <section class="preview-area">
+        <div id="previewCard" class="card template-gold square">
+          <canvas id="effects" class="effects"></canvas>
+          <div id="stickerLayer" class="sticker-layer"></div>
+          <img id="photo" class="photo" alt="Your photo" style="display:none"/>
+          <h2 id="title">✨ Happy New Year 2026 ✨</h2>
+          <p id="message">May 2026 bring love, luck and endless joy!</p>
+
+          <div class="bottom-marquee"><marquee behavior="scroll" direction="left" scrollamount="4">🎆 Share joy — Send this card to your loved ones! 🎆</marquee></div>
+        </div>
+
+        <aside class="side">
+          <div class="label">Add Stickers</div>
+          <div class="stickers">
+            <button class="sticker">❤️</button>
+            <button class="sticker">🌸</button>
+            <button class="sticker">🎈</button>
+            <button class="sticker">🎉</button>
+            <button class="sticker">✨</button>
+            <button class="sticker">2026</button>
+          </div>
+          <div class="label" style="margin-top:12px">Template Preview</div>
+          <div class="template-thumbs">
+            <div class="thumb thumb-gold selected" data-t="gold"></div>
+            <div class="thumb thumb-red" data-t="red"></div>
+            <div class="thumb thumb-neon" data-t="neon"></div>
+            <div class="thumb thumb-min" data-t="min"></div>
+          </div>
+          <div class="note">Photos are processed locally in your browser and not uploaded to any server.</div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">© 2026 — Dainik Adhyay • Made with ❤️</footer>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="https://cdn.jsdelivr.net/gh/anandchowdhary/music-for-demos/happy-new-year.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
